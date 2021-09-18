@@ -1,0 +1,33 @@
+{
+    "$schema": "../__Test__schema__/TestDataSchema.json",
+    "describe": "Profile api test unit",
+    "its": [
+        {
+            "description": "test api ",
+            "url": "/profile",
+            "method": "post",
+            "payload": "",
+            "needAuthentication": false,
+            "returnResponseOk": true,
+            "expectedResponse": []
+        },
+        {
+            "description": "test api ",
+            "url": "/profile",
+            "method": "put",
+            "payload": "",
+            "needAuthentication": false,
+            "returnResponseOk": true,
+            "expectedResponse": []
+        },
+        {
+            "description": "test api ",
+            "url": "/profile",
+            "method": "get",
+            "payload": "",
+            "needAuthentication": false,
+            "returnResponseOk": true,
+            "expectedResponse": []
+        }
+    ]
+}

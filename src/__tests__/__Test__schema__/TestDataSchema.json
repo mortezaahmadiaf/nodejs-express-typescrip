@@ -1,0 +1,111 @@
+{
+    "title": "Test Data Schema",
+    "version": "1.0.0",
+    "type": "object",
+    "properties": {
+        "describe": {
+            "type": "string",
+            "default": "Test Class Unit",
+            "description": "Describe your test class",
+            "required": [
+                "description"
+            ]
+        },
+        "its": {
+            "type": "array",
+            "items": {
+                "required": [
+                    "url",
+                    "method",
+                    "payload",
+                    "returnResponseOk",
+                    "expectedResponse"
+                ],
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "Description to eatch test api"
+                    },
+                    "url": {
+                        "type": "string",
+                        "default": "/",
+                        "description": "Your test api url"
+                    },
+                    "method": {
+                        "type": "string",
+                        "enum": [
+                            "get",
+                            "post",
+                            "put",
+                            "delete"
+                        ],
+                        "default": "get",
+                        "description": "Your api method"
+                    },
+                    "payload": {
+                        "description": "Data you need to send",
+                        "default": {}
+                    },
+                    "needAuthentication": {
+                        "type": "boolean",
+                        "enum": [
+                            false,
+                            true
+                        ],
+                        "default": false,
+                        "description": "if Api need Authentication set true else false and for default is false"
+                    },
+                    "returnResponseOk": {
+                        "type": "boolean",
+                        "enum": [
+                            true,
+                            false
+                        ],
+                        "default": true,
+                        "description": "If  your api must return response ok set true eles false and for default is true"
+                    },
+                    "expectedResponse": {
+                        "type": "array",
+                        "items": {
+                            "required": [
+                                "property",
+                                "value",
+                                "function"
+                            ],
+                            "type": "object",
+                            "properties": {
+                                "property": {
+                                    "type": "string",
+                                    "default": "",
+                                    "description": "the property you expect in response of api"
+                                },
+                                "value": {
+                                    "description": "the value of property you expect in response of api"
+                                },
+                                "function": {
+                                    "type": "string",
+                                    "default": "toEqual",
+                                    "enum": [
+                                        "toEqual",
+                                        "toNotEqual",
+                                        "toNotDeepEqual",
+                                        "toDeepEqual",
+                                        "toBeWithin",
+                                        "toNestedInclude",
+                                        "toHaveNestedProperty"
+                                    ],
+                                    "description": "compare value of property you expect in response of api"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "describe",
+        "its"
+    ]
+}

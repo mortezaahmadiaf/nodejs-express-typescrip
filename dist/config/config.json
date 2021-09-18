@@ -1,0 +1,31 @@
+{
+    "postgres": {
+        "username": "postgres",
+        "password": "1234",
+        "database": "development",
+        "host": "localhost",
+        "port": 5432,
+        "dialect": "postgres",
+        "pool": {
+            "max": 9,
+            "min": 0,
+            "idle": 1000
+        }
+    },
+    "mongo": {
+        "url": "mongodb://localhost:27017",
+        "database": "development"
+    },
+    "firebase": {
+        "type": "",
+        "project_id": "",
+        "private_key_id": "",
+        "private_key": "",
+        "client_email": "",
+        "client_id": "",
+        "auth_uri": "",
+        "token_uri": "",
+        "auth_provider_x509_cert_url": "",
+        "client_x509_cert_url": ""
+    }
+}

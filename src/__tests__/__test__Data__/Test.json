@@ -1,0 +1,33 @@
+{
+    "$schema": "../__Test__schema__/TestDataSchema.json",
+    "describe": "Test Api test unit",
+    "its": [
+        {
+            "description": "test api ",
+            "url": "/test",
+            "method": "post",
+            "payload": "",
+            "needAuthentication": false,
+            "returnResponseOk": true,
+            "expectedResponse": []
+        },
+        {
+            "description": "test api ",
+            "url": "/test",
+            "method": "put",
+            "payload": "",
+            "needAuthentication": false,
+            "returnResponseOk": true,
+            "expectedResponse": []
+        },
+        {
+            "description": "test api ",
+            "url": "/test",
+            "method": "get",
+            "payload": "",
+            "needAuthentication": false,
+            "returnResponseOk": true,
+            "expectedResponse": []
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "resolveJsonModule": true,
+        "emitDecoratorMetadata": true,
+        "removeComments": true,
+        "pretty": true,
+        "outDir": "./dist",
+        "baseUrl": "./src"
+    },
+    "include": [
+        "src/**/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "src/test/**"
+    ]
+}
